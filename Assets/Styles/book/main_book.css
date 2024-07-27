@@ -1,0 +1,162 @@
+.main__book{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__book div{
+    width: 100%;
+}
+
+.book__background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+    
+    background-color: var(--creme-color);
+}
+
+.book__background h1{
+    font-family: var(--secundary-font);
+    font-size: 6rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.book__background p{
+    max-width: 575px;
+    font-family: var(--principal-font);
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.book__map{
+    min-height: 600px;
+    background-image: url(../../Images/Images_book/Map.png);
+    background-size: cover;
+}
+
+.book__form{
+    max-width: 800px;
+    max-height: 500px;
+
+    background-color: var(--bg-form);
+
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 30px 30px 70px var(--shadow-form);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form__row{
+    display: flex;
+    margin: 0 0 20px 0;
+    gap: 20px;
+}
+
+.form__organization div label,
+.form__organization div input,
+.form__organization label,
+.form__organization input{
+    font-family: var(--principal-font);
+    color: var(--greenItens-color);
+    font-size: 1rem;
+}
+
+.form__organization label{
+    width: 100%;
+    font-weight: 700;
+}
+
+.form__organization input{
+    width: 280px;
+    height: 45px;
+    padding: 5px 20px;
+
+    border: 1px solid var(--green-light);
+    border-radius: 40px;
+}
+
+.form__organization div:first-of-type input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    background: url('../../Images/Images_book/Icon\ agenda.svg') no-repeat center center;
+    filter: none;
+}
+
+.organization__inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.organization__inputs input{
+    width: 100%;
+}
+
+.organization__inputs label{
+    margin: 15px 0 10px 0;
+}
+
+.form__final{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#submit__button{
+    width: 100%;
+
+    font-size: 0.9rem;
+    text-align: center;
+
+    background-color: var(--redItens-color);
+    color: var(--text-button);
+    border: 0;
+    box-shadow: 1px 1px 1px var(--shadow);
+    transition: all 0.15s ease-in;
+
+    cursor: pointer;
+}
+
+#submit__button:hover{
+    background-color: var(--redHover-color);
+    color: var(--whiteHover-color);
+}
+
+@media (min-width:950px){
+
+    .book__form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 590px){
+
+    .book__background h1{
+        font-size: 4.5rem;
+    }
+
+    .book__background p{
+        font-size: 1rem;
+    }
+
+    .book__form{
+        max-height: 650px;
+        margin: 20px;
+    }
+
+    .form__row{
+        flex-direction: column;
+    }
+}

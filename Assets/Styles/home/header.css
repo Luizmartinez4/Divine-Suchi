@@ -1,0 +1,340 @@
+.header__home{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* menu */
+
+.header__mobile{
+    display: none;
+}
+
+/* a partir de 780px */
+
+.header__contact-screen{
+    display: none;
+}
+
+.header__speedContact{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__speedContact figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.header__speedContact figure p{
+    font-size: 1rem;
+    font-family: var(--principal-font);
+    font-weight: 400;
+
+    line-height: 1.3rem;
+    text-align: center;
+
+    color: var(--creme-color);
+}
+
+.mobile__redes-sociais,
+.header__redes-sociais{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mobile__redes-sociais a,
+.header__redes-sociais a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 100%;
+    background-color: var(--backgroundRedes-sociais);
+}
+
+.mobile__redes-sociais a img,
+.header__redes-sociais a img{
+    width: 14px;
+    height: 14px;
+}
+
+/* header inferior mobile */
+
+.navigation__menu-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+.navigation__menu-mobile div{
+    width: 30px;
+    height: 2px;
+
+    background-color: var(--Menu-header);
+}
+
+.header__navigation-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.navigation__itens-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navigation__itens-mobile li:first-of-type{
+    background-color: var(--green-light);
+    border-radius: 35px;
+
+    padding: 10px 18px;
+}
+
+.navigation__itens-mobile li a{
+    font-family: var(--principal-font);
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    line-height: 1.5rem;
+    color: var(--greenItens-color);
+    text-align: center;
+}
+
+.navigation__menu-mobile div{
+    transition: all 0.3s ease-in;
+}
+
+.header__navigation-mobile.open ~ .header__navigation > .navigation__menu-mobile div:first-of-type{ 
+    transform: rotate(-45deg) translate(-5px, 0);
+}
+
+.header__navigation-mobile.open ~ .header__navigation > .navigation__menu-mobile div:nth-of-type(2){
+    display: none;
+}
+
+.header__navigation-mobile.open ~ .header__navigation > .navigation__menu-mobile div:last-of-type{
+    transform: rotate(45deg) translate(-5px, 0);
+}
+
+/* menu aberto */
+
+.header__navigation-mobile{
+    display: none;
+    height: 0;
+    opacity: 0;
+}
+
+.header__navigation-mobile.open{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 98px);
+    width: 100%;
+
+    background-color: var(--creme-color);
+
+    opacity: 1;
+    animation: menuOpen 0.3s ease-in-out;
+
+    position: absolute;
+    top: 94px;
+    z-index: 2;
+}
+
+.mobile__contact{
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 15px 0 0 0;
+}
+
+.mobile__speedContact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mobile__speedContact figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.mobile__speedContact figure p{
+    font-size: 1rem;
+    font-family: var(--principal-font);
+    font-weight: 400;
+
+    line-height: 1.3rem;
+    text-align: center;
+
+    color: var(--greenItens-color);
+}
+
+/* header inferior screen */
+
+.header__navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 20px 30px;
+
+    background-color: var(--creme-color);
+}
+
+.header__navigation figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header__navigation figure h1{
+    font-family: var(--secundary-font);
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: 600;
+
+    line-height: 1.8rem;
+    letter-spacing: -0.4px;
+
+    color: var(--logo-color);
+}
+
+.navigation__itens{
+    display: none;
+}
+
+/* .navigation__itens li:first-of-type{
+    background-color: var(--green-light);
+    border-radius: 35px;
+
+    padding: 6px 14px;
+} */
+
+.navigation__itens li a{
+    font-family: var(--principal-font);
+    font-weight: 500;
+    font-size: 1rem;
+
+    line-height: 1.5rem;
+    color: var(--greenItens-color);
+    text-align: center;
+}
+
+.navigation__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--principal-font);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-align: center;
+
+    color: var(--text-buttons);
+    border: 1.5px solid var(--greenItens-color);
+    border-radius: 120px;
+
+    min-width: 140px;
+    min-height: 45px;
+
+    transition: all 0.15s ease-in;
+}
+
+.navigation__button:hover{
+    background-color: var(--whiteHover-color);
+}
+
+@media (min-width: 630px){
+
+    .header__navigation figure h1{
+        font-size: 2.6rem;
+    }
+}
+
+
+@media (min-width: 790px){
+
+    .header__navigation{
+        padding: 20px 150px;
+    }
+}
+
+@media (min-width: 1110px){
+
+    .header__contact-screen{
+        width: 100%;
+        padding: 10px 150px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    
+        background-color: var(--contact-background);
+    }
+    .navigation__itens{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .header__navigation-mobile{
+        display: none;
+    }
+
+    .navigation__menu-mobile{
+        display: none;
+    }
+}
+
+@media (max-width: 460px){
+
+    .header__navigation{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 360px){
+
+    .mobile__speedContact{
+        gap: 10px;
+    }
+
+    .mobile__speedContact{
+        flex-direction: column;
+    }
+}
